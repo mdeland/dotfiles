@@ -1,0 +1,33 @@
+export PATH="$HOME/bin:$PATH"
+
+export PYTHONPATH="$HOME/bin:$PYTHONPATH"
+export HADOOP_HOME=/usr/local/Cellar/hadoop/1.0.1
+#export HADOOP_HOME=/usr/local/hadoop
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+unalias fs &> /dev/null
+alias fs="hadoop fs"
+unalias hls &> /dev/null
+alias hls="fs -ls"
+
+export PATH=$PATH:$HADOOP_HOME/bin
+
+complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
+complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" scp
+
+export PTG_HOME=/Users/mdeland/kfit/Gumilev/ptg
+export PYTHONPATH=$PYTHONPATH:/Users/mdeland/kfit
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+export DATA=~/data/
+export GOPATH=~/gocode/
+export PATH=$PATH:$GOPATH/bin
+
+stty stop undef # to unmap ctrl-s
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+COQTOP="/usr/local"
