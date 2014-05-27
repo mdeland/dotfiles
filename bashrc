@@ -25,6 +25,8 @@ export DATA=~/data/
 export GOPATH=~/gocode/
 export PATH=$PATH:$GOPATH/bin
 
+export $PGDATA=/usr/local/var/postgres/
+
 stty stop undef # to unmap ctrl-s
 
 ### Added by the Heroku Toolbelt
