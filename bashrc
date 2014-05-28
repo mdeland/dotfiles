@@ -25,7 +25,8 @@ export DATA=~/data/
 export GOPATH=~/gocode/
 export PATH=$PATH:$GOPATH/bin
 
-export $PGDATA=/usr/local/var/postgres/
+export PGDATA=/usr/local/var/postgres/
+export PGCONFIG=/usr/local/bin/pg_config
 
 stty stop undef # to unmap ctrl-s
 

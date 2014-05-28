@@ -1,0 +1,11 @@
+set nocursorline " don't highlight current line
+
+" keyboard shortcuts
+inoremap jj <ESC>
+
+" gui settings
+set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
