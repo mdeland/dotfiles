@@ -33,7 +33,7 @@ stty stop undef # to unmap ctrl-s
 # iterm coloring
 export LSCOLORS=dxfxcxdxbxegedabagacad
 export TERM=xterm-256color
-alias ls="ls --color=auto"
+alias ls="ls -G"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
