@@ -30,6 +30,11 @@ export PGCONFIG=/usr/local/bin/pg_config
 
 stty stop undef # to unmap ctrl-s
 
+# iterm coloring
+export LSCOLORS=dxfxcxdxbxegedabagacad
+export TERM=xterm-256color
+alias ls="ls --color=auto"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
