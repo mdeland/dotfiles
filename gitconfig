@@ -2,7 +2,7 @@
 	excludesfile = /Users/mdeland/.gitignore
 [user]
 	email = matthew.deland@gmail.com
-	name = Matt DeLand
+	name = mdeland
 [core]
     editor = vim -f
 
