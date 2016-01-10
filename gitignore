@@ -1,1 +1,5 @@
 *.swp
+*.ropeproject
+bokeh\.*
+.DS_Store
+.ruby-version
