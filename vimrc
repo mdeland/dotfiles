@@ -7,7 +7,10 @@ syntax enable
 " configure Vundle
 filetype on " without this vim emits a zero exit status, later, because of :ft off
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+
+set rtp+=~/.vim/bundle/vundle/Vundle.vim
+let &runtimepath.=',~/.vim/bundle/ale'
+
 call vundle#rc()
 
 " install Vundle bundles
@@ -77,10 +80,10 @@ nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nnoremap <leader>] :TagbarToggle<CR>
 nnoremap <leader><space> :call whitespace#strip_trailing()<CR>
 nnoremap <leader>g :GitGutterToggle<CR>
-nnoremap <leader>c <Plug>Kwbd
 noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>o :set paste!<CR>
+
 map q: :q
 
 " gui settings
@@ -105,7 +108,7 @@ endif
 " plugin settings
 let g:buffergator_suppress_keymaps=1
 let g:ctrlp_match_window = 'order:ttb,max:20'
-let g:gitgutter_enabled = 0
+let g:gitgutter_enabled = 1
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s %s"
 let g:haskell_folding=0
@@ -142,3 +145,5 @@ vnoremap p "_dP
 let g:syntastic_javascript_eslint_exec = 'npm-exec-eslint'
 autocmd FileType javascript let b:syntastic_checkers = matchstr(getline(0,1), '/\* use-jshint \*/') != '' ? ['jshint'] : ['eslint']
 
+au FileType python map <silent> <leader>b import pudb; pudb.set_trace() # XXX<esc>
+au FileType python map <silent> <leader>B import pudb; pudb.set_trace() # XXX<esc>

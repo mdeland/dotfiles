@@ -4,7 +4,7 @@ config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
 
-bind p:cmd hint QWERTYUIOPASDFGHJKL # use whatever keys you want
+# bind p:cmd hint QWERTYUIOPASDFGHJKL # use whatever keys you want
 
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
