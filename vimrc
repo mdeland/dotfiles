@@ -8,7 +8,7 @@ syntax enable
 filetype on " without this vim emits a zero exit status, later, because of :ft off
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 let &runtimepath.=',~/.vim/bundle/ale'
 
 call vundle#rc()
